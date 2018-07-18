@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<opencv_storage>
+<!-- video_type: 视频流类型，1从文件读，2选择云台 -->
+<video_type>1</video_type>
+<!-- video_path: 视频文件路径 -->
+<video_path>"D:\UAV\视频数据\真实-FLETD-1.mp4"</video_path>
+</opencv_storage>

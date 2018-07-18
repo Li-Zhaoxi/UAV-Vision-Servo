@@ -1,0 +1,5 @@
+﻿  simulation.cpp
+d:\uav\uav vision servo\simulation\simulation.cpp(190): error C2065: “UAV_OBJECTDETECTION”: 未声明的标识符
+d:\uav\uav vision servo\simulation\simulation.cpp(193): error C2065: “UAV_CROSSDETECTION”: 未声明的标识符
+d:\uav\uav vision servo\simulation\simulation.cpp(196): error C2065: “UAV_QUITWHILE”: 未声明的标识符
+d:\uav\uav vision servo\simulation\simulation.cpp(202): error C2065: “UAV_TEST_FLELD”: 未声明的标识符

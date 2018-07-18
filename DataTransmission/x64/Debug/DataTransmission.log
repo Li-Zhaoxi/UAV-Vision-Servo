@@ -1,0 +1,147 @@
+﻿  DataTransmission.cpp
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(4): error C2039: “winSimulated”: 不是“DataTran”的成员
+  d:\uav\uav vision servo\include\datatransmission.h(16): note: 参见“DataTran”的声明
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(4): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(4): error C2146: 语法错误: 缺少“;”(在标识符“winSimulated”的前面)
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(5): error C2039: “editHighValue”: 不是“DataTran”的成员
+  d:\uav\uav vision servo\include\datatransmission.h(16): note: 参见“DataTran”的声明
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(5): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(5): error C2086: “int HWND”: 重定义
+  d:\uav\uav vision servo\datatransmission\datatransmission.cpp(4): note: 参见“HWND”的声明
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(5): error C2146: 语法错误: 缺少“;”(在标识符“editHighValue”的前面)
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(6): error C2039: “comboState”: 不是“DataTran”的成员
+  d:\uav\uav vision servo\include\datatransmission.h(16): note: 参见“DataTran”的声明
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(6): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(6): error C2086: “int HWND”: 重定义
+  d:\uav\uav vision servo\datatransmission\datatransmission.cpp(4): note: 参见“HWND”的声明
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(6): error C2146: 语法错误: 缺少“;”(在标识符“comboState”的前面)
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(7): error C2039: “bottonSend”: 不是“DataTran”的成员
+  d:\uav\uav vision servo\include\datatransmission.h(16): note: 参见“DataTran”的声明
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(7): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(7): error C2086: “int HWND”: 重定义
+  d:\uav\uav vision servo\datatransmission\datatransmission.cpp(4): note: 参见“HWND”的声明
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(7): error C2146: 语法错误: 缺少“;”(在标识符“bottonSend”的前面)
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(9): error C2039: “highValue”: 不是“DataTran”的成员
+  d:\uav\uav vision servo\include\datatransmission.h(16): note: 参见“DataTran”的声明
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(10): error C2039: “stateType”: 不是“DataTran”的成员
+  d:\uav\uav vision servo\include\datatransmission.h(16): note: 参见“DataTran”的声明
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(10): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(10): error C2146: 语法错误: 缺少“;”(在标识符“stateType”的前面)
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(11): error C2039: “stateInType”: 不是“DataTran”的成员
+  d:\uav\uav vision servo\include\datatransmission.h(16): note: 参见“DataTran”的声明
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(11): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(11): error C2086: “int byte”: 重定义
+  d:\uav\uav vision servo\datatransmission\datatransmission.cpp(10): note: 参见“byte”的声明
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(11): error C2146: 语法错误: 缺少“;”(在标识符“stateInType”的前面)
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(12): error C2039: “stateOutType”: 不是“DataTran”的成员
+  d:\uav\uav vision servo\include\datatransmission.h(16): note: 参见“DataTran”的声明
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(12): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(12): error C2086: “int byte”: 重定义
+  d:\uav\uav vision servo\datatransmission\datatransmission.cpp(10): note: 参见“byte”的声明
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(12): error C2146: 语法错误: 缺少“;”(在标识符“stateOutType”的前面)
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(13): error C2039: “isUsingWhile”: 不是“DataTran”的成员
+  d:\uav\uav vision servo\include\datatransmission.h(16): note: 参见“DataTran”的声明
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(13): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(13): error C2086: “int byte”: 重定义
+  d:\uav\uav vision servo\datatransmission\datatransmission.cpp(10): note: 参见“byte”的声明
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(13): error C2146: 语法错误: 缺少“;”(在标识符“isUsingWhile”的前面)
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(23): error C2653: “cv”: 不是类或命名空间名称
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(23): error C2039: “confirmROI”: 不是“DataTran”的成员
+  d:\uav\uav vision servo\include\datatransmission.h(16): note: 参见“DataTran”的声明
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(23): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(23): error C2146: 语法错误: 缺少“;”(在标识符“confirmROI”的前面)
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(25): error C2039: “vector”: 不是“std”的成员
+  d:\uav\uav vision servo\datatransmission\predefined c++ types (compiler internal)(209): note: 参见“std”的声明
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(25): error C2143: 语法错误: 缺少“;”(在“<”的前面)
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(25): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(25): error C2653: “cv”: 不是类或命名空间名称
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(25): error C2039: “allCenters”: 不是“DataTran”的成员
+  d:\uav\uav vision servo\include\datatransmission.h(16): note: 参见“DataTran”的声明
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(27): error C2039: “offset_Xpx”: 不是“DataTran”的成员
+  d:\uav\uav vision servo\include\datatransmission.h(16): note: 参见“DataTran”的声明
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(28): error C2039: “offset_Ypx”: 不是“DataTran”的成员
+  d:\uav\uav vision servo\include\datatransmission.h(16): note: 参见“DataTran”的声明
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(29): error C2039: “offset_Xm”: 不是“DataTran”的成员
+  d:\uav\uav vision servo\include\datatransmission.h(16): note: 参见“DataTran”的声明
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(30): error C2039: “offset_Ym”: 不是“DataTran”的成员
+  d:\uav\uav vision servo\include\datatransmission.h(16): note: 参见“DataTran”的声明
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(32): error C2143: 语法错误: 缺少“;”(在“*”的前面)
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(32): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(32): error C2039: “pMainCommunication”: 不是“DataTran”的成员
+  d:\uav\uav vision servo\include\datatransmission.h(16): note: 参见“DataTran”的声明
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(32): error C2065: “NULL”: 未声明的标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(35): error C2039: “createWinSimula”: 不是“DataTran”的成员
+  d:\uav\uav vision servo\include\datatransmission.h(16): note: 参见“DataTran”的声明
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(35): error C2065: “HINSTANCE”: 未声明的标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(35): error C2146: 语法错误: 缺少“)”(在标识符“hInstance”的前面)
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(36): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(36): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(87): error C2039: “sendMsgPC2UAV”: 不是“DataTran”的成员
+  d:\uav\uav vision servo\include\datatransmission.h(16): note: 参见“DataTran”的声明
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(87): error C2061: 语法错误: 标识符“TCHAR”
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(89): error C2065: “TCHAR”: 未声明的标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(89): error C2146: 语法错误: 缺少“;”(在标识符“sz”的前面)
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(89): error C2065: “sz”: 未声明的标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(90): error C2065: “sz”: 未声明的标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(90): error C3861: “_T”: 找不到标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(90): error C3861: “_stprintf_s”: 找不到标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(91): error C2065: “winSimulated”: 未声明的标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(91): error C2065: “IDC_TEXT_OFFSET_XPX”: 未声明的标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(91): error C3861: “GetDlgItem”: 找不到标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(91): error C2065: “sz”: 未声明的标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(91): error C3861: “SetWindowText”: 找不到标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(92): error C2065: “sz”: 未声明的标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(92): error C3861: “_T”: 找不到标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(92): error C3861: “_stprintf_s”: 找不到标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(93): error C2065: “winSimulated”: 未声明的标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(93): error C2065: “IDC_TEXT_OFFSET_YPX”: 未声明的标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(93): error C3861: “GetDlgItem”: 找不到标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(93): error C2065: “sz”: 未声明的标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(93): error C3861: “SetWindowText”: 找不到标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(94): error C2065: “sz”: 未声明的标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(94): error C3861: “_T”: 找不到标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(94): error C3861: “_stprintf_s”: 找不到标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(95): error C2065: “winSimulated”: 未声明的标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(95): error C2065: “IDC_TEXT_OFFSET_XM”: 未声明的标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(95): error C3861: “GetDlgItem”: 找不到标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(95): error C2065: “sz”: 未声明的标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(95): error C3861: “SetWindowText”: 找不到标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(96): error C2065: “sz”: 未声明的标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(96): error C3861: “_T”: 找不到标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(96): error C3861: “_stprintf_s”: 找不到标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(97): error C2065: “winSimulated”: 未声明的标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(97): error C2065: “IDC_TEXT_OFFSET_YM”: 未声明的标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(97): error C3861: “GetDlgItem”: 找不到标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(97): error C2065: “sz”: 未声明的标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(97): error C3861: “SetWindowText”: 找不到标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(98): error C2065: “winSimulated”: 未声明的标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(98): error C2065: “IDC_TEST_ILUINFO”: 未声明的标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(98): error C3861: “GetDlgItem”: 找不到标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(98): error C2065: “stateInfor”: 未声明的标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(98): error C3861: “SetWindowText”: 找不到标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(100): error C2039: “sendMsgTime”: 不是“DataTran”的成员
+  d:\uav\uav vision servo\include\datatransmission.h(16): note: 参见“DataTran”的声明
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(102): error C2065: “TCHAR”: 未声明的标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(102): error C2146: 语法错误: 缺少“;”(在标识符“sz”的前面)
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(102): error C2065: “sz”: 未声明的标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(103): error C2065: “sz”: 未声明的标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(103): error C3861: “_T”: 找不到标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(103): error C3861: “_stprintf_s”: 找不到标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(104): error C2065: “winSimulated”: 未声明的标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(104): error C2065: “IDC_TEXT_USINGTIME”: 未声明的标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(104): error C3861: “GetDlgItem”: 找不到标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(104): error C2065: “sz”: 未声明的标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(104): error C3861: “SetWindowText”: 找不到标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(107): error C2039: “sendHighValue”: 不是“DataTran”的成员
+  d:\uav\uav vision servo\include\datatransmission.h(16): note: 参见“DataTran”的声明
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(109): error C2065: “TCHAR”: 未声明的标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(109): error C2146: 语法错误: 缺少“;”(在标识符“sz”的前面)
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(109): error C2065: “sz”: 未声明的标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(110): error C2065: “sz”: 未声明的标识符
+d:\uav\uav vision servo\datatransmission\datatransmission.cpp(110): fatal error C1003: 错误计数超过 100；正在停止编译
+  正在生成代码...
+  正在编译...
+  MainCommunication.cpp
+  正在生成代码...
+  正在跳过...(未检测到相关更改)
+  SerialPort.cpp

@@ -1,0 +1,48 @@
+﻿  main.cpp
+d:\opencv3.1\opencv\build\include\opencv2\core\mat.hpp(1965): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+d:\opencv3.1\opencv\build\include\opencv2\core\persistence.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+d:\opencv3.1\opencv\build\include\opencv2\core\utility.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+d:\opencv3.1\opencv\build\include\opencv2\core\utility.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+d:\uav\uav vision servo\functionstest\main.cpp(553): warning C4244: “=”: 从“int64”转换到“double”，可能丢失数据
+d:\uav\uav vision servo\functionstest\main.cpp(555): warning C4244: “=”: 从“int64”转换到“double”，可能丢失数据
+d:\uav\uav vision servo\functionstest\main.cpp(559): warning C4244: “=”: 从“int64”转换到“double”，可能丢失数据
+d:\uav\uav vision servo\functionstest\main.cpp(620): warning C4244: “=”: 从“int64”转换到“double”，可能丢失数据
+d:\uav\uav vision servo\functionstest\main.cpp(622): warning C4244: “=”: 从“int64”转换到“double”，可能丢失数据
+d:\uav\uav vision servo\functionstest\main.cpp(626): warning C4244: “=”: 从“int64”转换到“double”，可能丢失数据
+d:\uav\uav vision servo\functionstest\main.cpp(779): warning C4244: “=”: 从“int64”转换到“double”，可能丢失数据
+d:\uav\uav vision servo\functionstest\main.cpp(780): warning C4244: “=”: 从“int64”转换到“double”，可能丢失数据
+d:\uav\uav vision servo\functionstest\main.cpp(783): warning C4244: “=”: 从“int64”转换到“double”，可能丢失数据
+d:\uav\uav vision servo\functionstest\main.cpp(786): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+d:\uav\uav vision servo\functionstest\main.cpp(786): warning C4267: “初始化”: 从“size_t”转换到“const int”，可能丢失数据
+d:\uav\uav vision servo\functionstest\main.cpp(790): warning C4244: “=”: 从“int64”转换到“double”，可能丢失数据
+d:\uav\uav vision servo\functionstest\main.cpp(812): warning C4244: “=”: 从“int64”转换到“double”，可能丢失数据
+d:\uav\uav vision servo\functionstest\main.cpp(817): warning C4244: “=”: 从“int64”转换到“double”，可能丢失数据
+d:\uav\uav vision servo\functionstest\main.cpp(820): warning C4244: “=”: 从“int64”转换到“double”，可能丢失数据
+d:\uav\uav vision servo\functionstest\main.cpp(823): warning C4244: “=”: 从“int64”转换到“double”，可能丢失数据
+d:\uav\uav vision servo\functionstest\main.cpp(825): warning C4244: “=”: 从“int64”转换到“double”，可能丢失数据
+d:\uav\uav vision servo\functionstest\main.cpp(844): warning C4244: “=”: 从“int64”转换到“double”，可能丢失数据
+d:\uav\uav vision servo\functionstest\main.cpp(946): warning C4244: “=”: 从“int64”转换到“double”，可能丢失数据
+d:\uav\uav vision servo\functionstest\main.cpp(952): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+d:\uav\uav vision servo\functionstest\main.cpp(953): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+d:\uav\uav vision servo\functionstest\main.cpp(954): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+d:\uav\uav vision servo\functionstest\main.cpp(955): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+d:\uav\uav vision servo\functionstest\main.cpp(972): warning C4244: “=”: 从“int64”转换到“double”，可能丢失数据
+d:\uav\uav vision servo\functionstest\main.cpp(990): warning C4244: “=”: 从“int64”转换到“double”，可能丢失数据
+d:\uav\uav vision servo\functionstest\main.cpp(995): warning C4244: “=”: 从“int64”转换到“double”，可能丢失数据
+d:\uav\uav vision servo\functionstest\main.cpp(998): warning C4244: “=”: 从“int64”转换到“double”，可能丢失数据
+d:\uav\uav vision servo\functionstest\main.cpp(1001): warning C4244: “=”: 从“int64”转换到“double”，可能丢失数据
+d:\uav\uav vision servo\functionstest\main.cpp(1003): warning C4244: “=”: 从“int64”转换到“double”，可能丢失数据
+d:\uav\uav vision servo\functionstest\main.cpp(1009): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+d:\uav\uav vision servo\functionstest\main.cpp(1010): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+d:\uav\uav vision servo\functionstest\main.cpp(1011): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+d:\uav\uav vision servo\functionstest\main.cpp(1012): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+d:\uav\uav vision servo\functionstest\main.cpp(1025): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+d:\uav\uav vision servo\functionstest\main.cpp(1025): warning C4267: “初始化”: 从“size_t”转换到“const int”，可能丢失数据
+d:\uav\uav vision servo\functionstest\main.cpp(1063): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+d:\uav\uav vision servo\functionstest\main.cpp(1064): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+d:\uav\uav vision servo\functionstest\main.cpp(1065): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+d:\uav\uav vision servo\functionstest\main.cpp(1066): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+d:\uav\uav vision servo\functionstest\main.cpp(923): warning C4101: “pipeline_ed”: 未引用的局部变量
+d:\uav\uav vision servo\functionstest\main.cpp(109): warning C4715: “main_1”: 不是所有的控件路径都返回值
+  FunctionsTest.vcxproj -> D:\UAV\UAV Vision Servo\FunctionsTest\..\bin\FunctionsTestd.exe
+  FunctionsTest.vcxproj -> ..\x64\Debug\FunctionsTestd.pdb (Full PDB)

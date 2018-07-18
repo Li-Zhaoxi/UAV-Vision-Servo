@@ -1,0 +1,9 @@
+﻿  CFG_RVIBE.cpp
+  Fast_testAndUpdate.cpp
+  RVIBE.cpp
+    正在创建库 ..\lib\rvibe.lib 和对象 ..\lib\rvibe.exp
+  正在生成代码
+  All 769 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  RVIBE.vcxproj -> D:\UAV\UAV Vision Servo\RVIBE\..\bin\rvibe.dll
+  RVIBE.vcxproj -> ..\x64\Release\rvibe.pdb (Full PDB)

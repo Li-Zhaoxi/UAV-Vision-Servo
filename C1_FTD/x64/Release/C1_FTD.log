@@ -1,0 +1,11 @@
+﻿  C1_FTD.cpp
+  C1_FTD_drawfunctions.cpp
+  C1_FTD_TBB.cpp
+C1_FTD_TBB.cpp(25): warning C4101: “idx_j”: 未引用的局部变量
+C1_FTD_TBB.cpp(25): warning C4101: “idx_i”: 未引用的局部变量
+    正在创建库 ..\lib\c1_ftd.lib 和对象 ..\lib\c1_ftd.exp
+  正在生成代码
+  All 666 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  C1_FTD.vcxproj -> D:\UAV\UAV Vision Servo\C1_FTD\..\bin\c1_ftd.dll
+  C1_FTD.vcxproj -> ..\x64\Release\c1_ftd.pdb (Full PDB)

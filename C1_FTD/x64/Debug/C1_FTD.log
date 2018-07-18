@@ -1,0 +1,9 @@
+﻿  C1_FTD_drawfunctions.cpp
+  C1_FTD_TBB.cpp
+d:\uav\uav vision servo\c1_ftd\c1_ftd_tbb.cpp(25): warning C4101: “idx_j”: 未引用的局部变量
+d:\uav\uav vision servo\c1_ftd\c1_ftd_tbb.cpp(25): warning C4101: “idx_i”: 未引用的局部变量
+  C1_FTD.cpp
+  正在生成代码...
+    正在创建库 ..\lib\c1_ftdd.lib 和对象 ..\lib\c1_ftdd.exp
+  C1_FTD.vcxproj -> D:\UAV\UAV Vision Servo\C1_FTD\..\bin\c1_ftdd.dll
+  C1_FTD.vcxproj -> ..\x64\Debug\c1_ftdd.pdb (Full PDB)
