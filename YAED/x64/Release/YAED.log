@@ -1,8 +1,0 @@
-﻿  common.cpp
-  EllipseDetectorYaed.cpp
-    正在创建库 ..\lib\yaed.lib 和对象 ..\lib\yaed.exp
-  正在生成代码
-  All 1210 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-  已完成代码的生成
-  YAED.vcxproj -> D:\UAV\UAV Vision Servo\YAED\..\bin\yaed.dll
-  YAED.vcxproj -> ..\x64\Release\yaed.pdb (Full PDB)

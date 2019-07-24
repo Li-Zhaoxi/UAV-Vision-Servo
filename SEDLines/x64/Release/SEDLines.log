@@ -1,8 +1,0 @@
-﻿  LineNode.cpp
-  Simplified_EDLines.cpp
-    正在创建库 ..\lib\sedlines.lib 和对象 ..\lib\sedlines.exp
-  正在生成代码
-  All 678 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-  已完成代码的生成
-  SEDLines.vcxproj -> D:\UAV\UAV Vision Servo\SEDLines\..\bin\sedlines.dll
-  SEDLines.vcxproj -> ..\x64\Release\sedlines.pdb (Full PDB)

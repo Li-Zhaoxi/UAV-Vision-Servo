@@ -270,7 +270,7 @@ void Simplified_EDLines::drawLineSegments4i(cv::Mat &ImgG, bool isShow)
 			cv::Point st, ed;
 			st.y = LineSegments[i][0], st.x = LineSegments[i][1];
 			ed.y = LineSegments[i][2], ed.x = LineSegments[i][3];
-			cv::line(ImgG, st, ed, cv::Scalar(255, 0, 0), 2);
+			cv::line(ImgG, st, ed, cv::Scalar(100, 255, 100), 2);
 
 		}
 	}
