@@ -1,7 +1,0 @@
-﻿  simulation.cpp
-    正在创建库 ..\lib\simulation.lib 和对象 ..\lib\simulation.exp
-  正在生成代码
-  All 15 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-  已完成代码的生成
-  Simulation.vcxproj -> D:\UAV\UAV Vision Servo\Simulation\..\bin\simulation.dll
-  Simulation.vcxproj -> ..\x64\Release\simulation.pdb (Full PDB)
