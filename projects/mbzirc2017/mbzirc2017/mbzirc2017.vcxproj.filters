@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="头文件\SEDLines">
+      <UniqueIdentifier>{6a2ace9a-0c48-4297-9971-396dfff666f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\SEDLines">
+      <UniqueIdentifier>{0f1d32db-134f-46aa-b3cd-f430ebaed45b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\RVIBE">
+      <UniqueIdentifier>{4c8245c0-680a-41b2-82b7-74c7b8f911b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\RVIBE">
+      <UniqueIdentifier>{21f76823-e57c-45ad-be36-837e59a86714}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\C1_FTD">
+      <UniqueIdentifier>{402da9cc-d218-41e2-9fd1-68fa36dfc02d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\C1_FTD">
+      <UniqueIdentifier>{247dbbbd-6830-4cad-b245-a331c5b24ca3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\C2_FTD">
+      <UniqueIdentifier>{27dca1a0-8889-4f60-9fab-b1c9db78fea0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\C2_FTD">
+      <UniqueIdentifier>{b43d3d3a-4ed2-44d8-a3ff-d5da5a06724d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\SEDLines\Simplified_EDLines.cpp">
+      <Filter>源文件\SEDLines</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\SEDLines\LineNode.cpp">
+      <Filter>源文件\SEDLines</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\SEDLines\Fast_SEDLines_tbb.cpp">
+      <Filter>源文件\SEDLines</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\RVIBE\CFG_RVIBE.cpp">
+      <Filter>源文件\RVIBE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\RVIBE\Fast_testAndUpdate.cpp">
+      <Filter>源文件\RVIBE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\RVIBE\RVIBE.cpp">
+      <Filter>源文件\RVIBE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\C1_FTD\C1_FTD_drawfunctions.cpp">
+      <Filter>源文件\C1_FTD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\C1_FTD\C1_FTD_TBB.cpp">
+      <Filter>源文件\C1_FTD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\C1_FTD\C1_FTD.cpp">
+      <Filter>源文件\C1_FTD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\C2_FTD\C2_FTD.cpp">
+      <Filter>源文件\C2_FTD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\C2_FTD\C2_FTD_drawfunctions.cpp">
+      <Filter>源文件\C2_FTD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\C2_FTD\twoL-means.cpp">
+      <Filter>源文件\C2_FTD</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\src\SEDLines\LineNode.h">
+      <Filter>头文件\SEDLines</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\SEDLines\Simplified_EDLines.h">
+      <Filter>头文件\SEDLines</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\RVIBE\CFG_RVIBE.h">
+      <Filter>头文件\RVIBE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\RVIBE\RVIBE.h">
+      <Filter>头文件\RVIBE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\C1_FTD\C1_FTD.h">
+      <Filter>头文件\C1_FTD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\C2_FTD\C2_FTD.h">
+      <Filter>头文件\C2_FTD</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
