@@ -152,6 +152,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="test_c1_ftd.cpp" />
+    <ClCompile Include="test_rvibe.cpp" />
     <ClCompile Include="test_sedlines.cpp" />
     <ClCompile Include="test_yaed.cpp" />
   </ItemGroup>

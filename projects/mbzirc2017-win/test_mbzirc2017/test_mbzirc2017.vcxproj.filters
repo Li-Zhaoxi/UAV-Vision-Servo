@@ -24,6 +24,12 @@
     <ClCompile Include="test_yaed.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="test_rvibe.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test_c1_ftd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="test_functions.h">

@@ -1,0 +1,12 @@
+Port                     = COM1   
+SizeInputBuffer             = 2048 
+SizeOutputBuffer            = 2048 
+BaudRate                    = 115200 
+BitValid                    = 8 
+CheckOption                 = NOPARITY 
+StopOption                  = ONESTOPBIT 
+ReadIntervalTimeout         = 3
+ReadTotalTimeoutMultiplier  = 3
+ReadTotalTimeoutConstant    = 2
+writeTotalTimeoutMultiplier = 3
+writeTotalTimeoutConstant   = 2
