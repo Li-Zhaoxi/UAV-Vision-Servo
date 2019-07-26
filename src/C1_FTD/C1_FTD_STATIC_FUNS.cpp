@@ -122,11 +122,13 @@ void C1_FTD::drawCrossFeatures(std::vector<CrossFeature> &in_crossfea, cv::Mat &
 		{
 			if (in_crossfea[i].isValid == false)
 				continue;
-			circle(ImgT, cv::Point((int)in_crossfea[i].O.y, (int)in_crossfea[i].O.x), 2, cv::Scalar(0, 0, 255), 2);
-
-			cv::line(ImgT, cv::Point((int)in_crossfea[i].O.y, (int)in_crossfea[i].O.x), cv::Point((int)(in_crossfea[i].O.y + l * in_crossfea[i].V_l.y), (int)(in_crossfea[i].O.x + l * in_crossfea[i].V_l.x)), cv::Scalar(255, 0, 0), 2);
-
-			cv::line(ImgT, cv::Point((int)in_crossfea[i].O.y, (int)in_crossfea[i].O.x), cv::Point((int)(in_crossfea[i].O.y + l * in_crossfea[i].V_r.y), (int)(in_crossfea[i].O.x + l * in_crossfea[i].V_r.x)), cv::Scalar(255, 0, 255), 2);
+			circle(ImgT, cv::Point((int)(in_crossfea[i].O.y + 0.5), (int)(in_crossfea[i].O.x + 0.5)), 2, cv::Scalar(0, 0, 255), 2);
+			cv::line(ImgT, cv::Point((int)(in_crossfea[i].O.y + 0.5), (int)(in_crossfea[i].O.x + 0.5)), 
+				cv::Point((int)(in_crossfea[i].O.y + l * in_crossfea[i].V_l.y + 0.5), 
+				(int)(in_crossfea[i].O.x + l * in_crossfea[i].V_l.x + 0.5)), cv::Scalar(255, 0, 0), 2);
+			cv::line(ImgT, cv::Point((int)(in_crossfea[i].O.y + 0.5), (int)(in_crossfea[i].O.x + 0.5)), 
+				cv::Point((int)(in_crossfea[i].O.y + l * in_crossfea[i].V_r.y + 0.5), (int)(in_crossfea[i].O.x + l * in_crossfea[i].V_r.x + 0.5)), 
+				cv::Scalar(255, 0, 255), 2);
 
 		}
 		cv::imshow("Cross Features", ImgT);
@@ -142,12 +144,13 @@ void C1_FTD::drawCrossFeatures(std::vector<CrossFeature> &in_crossfea, cv::Mat &
 		{
 			if (in_crossfea[i].isValid == false)
 				continue;
-			circle(ImgG, cv::Point((int)in_crossfea[i].O.y, (int)in_crossfea[i].O.x), 2, cv::Scalar(0, 0, 255), 2);
-
-			cv::line(ImgG, cv::Point((int)in_crossfea[i].O.y, (int)in_crossfea[i].O.x), cv::Point((int)(in_crossfea[i].O.y + l * in_crossfea[i].V_l.y), (int)(in_crossfea[i].O.x + l * in_crossfea[i].V_l.x)), cv::Scalar(255, 0, 0), 2);
-
-			cv::line(ImgG, cv::Point((int)in_crossfea[i].O.y, (int)in_crossfea[i].O.x), cv::Point((int)(in_crossfea[i].O.y + l * in_crossfea[i].V_r.y), (int)(in_crossfea[i].O.x + l * in_crossfea[i].V_r.x)), cv::Scalar(255, 0, 255), 2);
-
+			circle(ImgG, cv::Point((int)(in_crossfea[i].O.y + 0.5), (int)(in_crossfea[i].O.x + 0.5)), 2, cv::Scalar(0, 0, 255), 2);
+			cv::line(ImgG, cv::Point((int)(in_crossfea[i].O.y + 0.5), (int)(in_crossfea[i].O.x + 0.5)),
+				cv::Point((int)(in_crossfea[i].O.y + l * in_crossfea[i].V_l.y + 0.5),
+				(int)(in_crossfea[i].O.x + l * in_crossfea[i].V_l.x + 0.5)), cv::Scalar(255, 0, 0), 2);
+			cv::line(ImgG, cv::Point((int)(in_crossfea[i].O.y + 0.5), (int)(in_crossfea[i].O.x + 0.5)),
+				cv::Point((int)(in_crossfea[i].O.y + l * in_crossfea[i].V_r.y + 0.5), (int)(in_crossfea[i].O.x + l * in_crossfea[i].V_r.x + 0.5)),
+				cv::Scalar(255, 0, 255), 2);
 		}
 	}
 }
