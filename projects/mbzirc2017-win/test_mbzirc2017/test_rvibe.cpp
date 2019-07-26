@@ -6,7 +6,7 @@
 int main_3_0()
 {
 	string str_path;
-	str_path = "..\\..\\..\\datasets\\MBZIRC 18m #1.mp4";
+	str_path = "..\\..\\..\\datasets\\MBZIRC 18m #2.mp4";
 
 	cv::VideoCapture cap(str_path);
 	if (!cap.isOpened())

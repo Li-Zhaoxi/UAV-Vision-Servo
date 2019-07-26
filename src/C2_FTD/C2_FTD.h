@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <opencv2/opencv.hpp>
+#include <uavdef.h>
 
 struct LineINEllipse
 {
@@ -12,7 +13,7 @@ struct LineINEllipse
 	float cross4Direct[4];
 };
 
-class C2_FTD
+class UAV_EXPORTS C2_FTD
 {
 public:
 	C2_FTD();
@@ -92,8 +93,10 @@ private:
 
 	bool CONSTRAINT_DIST(const cv::Vec4i &line4, const cv::RotatedRect &fitelp) const
 	{
-		double minDist(1), maxDist = std::min(fitelp.size.height, fitelp.size.width) / 4;
+		double minDist(1), maxDist;
 		double vecL[4], dist;
+
+		maxDist = std::fminf(fitelp.size.height, fitelp.size.width) / 4;
 
 		vecL[0] = line4[2] - line4[0], vecL[1] = line4[3] - line4[1];
 		vecL[2] = fitelp.center.x - line4[0]; vecL[3] = fitelp.center.y - line4[1];
