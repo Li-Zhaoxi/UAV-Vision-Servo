@@ -22,6 +22,8 @@ public:
 	~Simplified_EDLines();
 	void release();
 	void create_EDLines(int drows, int dcols);
+	void setParame(int min_line_length, double lineFitErrThreshold);
+
 	Simplified_EDLines(int drows, int dcols);
 	void runSimplified_EDLines(cv::Mat &ImgG);
 	//void runSimplified_EDLines_tbb(cv::Mat &ImgG);

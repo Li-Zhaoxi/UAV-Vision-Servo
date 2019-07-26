@@ -87,6 +87,9 @@
     <ClCompile Include="..\..\..\src\YAED\EllipseDetectorYaed.cpp">
       <Filter>源文件\YAED</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\src\C1_FTD\C1_FTD_STATIC_FUNS.cpp">
+      <Filter>源文件\C1_FTD</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\src\SEDLines\LineNode.h">

@@ -26,6 +26,12 @@ Simplified_EDLines::~Simplified_EDLines()
 	}
 }
 
+void Simplified_EDLines::setParame(int min_line_length, double lineFitErrThreshold)
+{
+	this->min_line_length = min_line_length;
+	this->lineFitErrThreshold = lineFitErrThreshold;
+}
+
 void Simplified_EDLines::release()
 {
 	if (data != NULL)

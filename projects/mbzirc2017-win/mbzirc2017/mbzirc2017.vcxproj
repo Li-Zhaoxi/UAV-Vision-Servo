@@ -156,6 +156,7 @@
   <ItemGroup>
     <ClCompile Include="..\..\..\src\C1_FTD\C1_FTD.cpp" />
     <ClCompile Include="..\..\..\src\C1_FTD\C1_FTD_drawfunctions.cpp" />
+    <ClCompile Include="..\..\..\src\C1_FTD\C1_FTD_STATIC_FUNS.cpp" />
     <ClCompile Include="..\..\..\src\C1_FTD\C1_FTD_TBB.cpp" />
     <ClCompile Include="..\..\..\src\C2_FTD\C2_FTD.cpp" />
     <ClCompile Include="..\..\..\src\C2_FTD\C2_FTD_drawfunctions.cpp" />

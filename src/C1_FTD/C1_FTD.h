@@ -48,21 +48,30 @@ public:
 public: // drawfunctions;
     void drawCrossFeatures(cv::Mat &ImgG, bool isShow = false);
     void drawC1_FTD(cv::Mat &ImgG, bool isShow = false);
+
+public: // 用于非实例化调用的函数
+	static void CrossFeatureExtraction(
+		std::vector<cv::Vec4d> &in_correctedLines,
+		std::vector< cv::Point2d > &LinesGrad,
+		std::vector<CrossFeature> &out_crossfea,
+		double Error_Angle,
+		double lambda_line); // 无需实例化即可调用得函数,目前只考虑PI/2的情况，即不存在透视变换的情况
+	static void drawCrossFeatures(std::vector<CrossFeature> &in_crossfea, cv::Mat &ImgG, bool isShow = false);
+	static void CorrectLineSegments(const std::vector< cv::Vec<double, 11> > &in_fitLines, std::vector<cv::Vec4d> &out_correctedLines);
+
 private:
     // Step 1: Cross Feature Extraction
     void CrossFeatureExtraction(std::vector<cv::Vec4d> &in_correctedLines, std::vector< cv::Point2d > &LinesGrad, std::vector<CrossFeature> &out_crossfea);
     void CrossFeatureExtraction_tbb(std::vector<cv::Vec4d> &in_correctedLines, std::vector< cv::Point2d > &LinesGrad, std::vector<CrossFeature> &out_crossfea);
+	
     // Step 2: Rectangle Search Based on Cross Features
     void RectangleSearch(std::vector<CrossFeature> &in_crossfea, std::vector<CrossFeature> &ValidFeatures, std::vector< cv::Vec4i > &out_rects) const;
     // Step 3: Final Cross Selected
     void SelectFinalCross(std::vector< cv::Vec4i > &in_rects, std::vector<CrossFeature> &in_ValidFeatures);
 
     void ConstructAdjacency(std::vector<CrossFeature> &in_crossfea, std::vector<CrossFeature> &ValidFeatures, std::vector< std::vector<int> > &out_adjacency) const;
-    // 锟斤拷直锟竭段斤拷锟叫斤拷锟斤拷
-    static void CorrectLineSegments(const std::vector< cv::Vec<double, 11> > &in_fitLines, std::vector<cv::Vec4d> &out_correctedLines);
 
-
-
+    
     std::vector<CrossFeature> cross_feature;
     std::vector<cv::Vec4d> correctedLines;
     std::vector< cv::Vec4i > searchedRects;
