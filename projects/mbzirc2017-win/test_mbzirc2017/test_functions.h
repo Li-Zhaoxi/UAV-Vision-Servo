@@ -23,6 +23,7 @@ int main_3_0(); // 使用一个视频测试RVIBE
 
 int main_4_0(); // 使用一个视频: SEDLines -> C1_FTD
 int main_4_1(); // 使用一个图片：直线段检测 -> C1-FTD
+int main_4_2(); // 使用一个图片：直线段检测 -> 静态C1-FTD
 
 
 int main_5_0(); // 使用一个视频：椭圆检测 -> C2-FTD

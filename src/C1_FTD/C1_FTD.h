@@ -33,14 +33,14 @@ public:
     }
     void runC1_FTD(std::vector< cv::Vec<double, 11> > &detLineSegments, std::vector< cv::Point2d > &LineGradients);
 
-    // 鍚堜綔鍙傛暟锛屽湪绫诲垵濮嬪寲鏃跺€欏氨宸茬粡瀹氫箟濂界殑
+    // 设置算法参数
     void setFixedParams(double _lambda_line,double _Error_Angle)
     {
         lambda_line = _lambda_line;
         Error_Angle = _Error_Angle;
     }
 
-    // 鏍规嵁娣卞害+鐩告満鍐呭弬锛岀畻濂藉搴﹀€硷紝杩涜鏇存柊
+    // 设置目标宽度的实际像素宽度
     void setAdaptParams(double _FeaturesDistance)
     {
         FeaturesDistance = _FeaturesDistance;
@@ -57,8 +57,17 @@ public: // 用于非实例化调用的函数
 		double Error_Angle,
 		double lambda_line); // 无需实例化即可调用得函数,目前只考虑PI/2的情况，即不存在透视变换的情况
 	static void drawCrossFeatures(std::vector<CrossFeature> &in_crossfea, cv::Mat &ImgG, bool isShow = false);
-	static void CorrectLineSegments(const std::vector< cv::Vec<double, 11> > &in_fitLines, std::vector<cv::Vec4d> &out_correctedLines);
-
+	static void CorrectLineSegments(
+		const std::vector< cv::Vec<double, 11> > &in_fitLines, 
+		std::vector<cv::Vec4d> &out_correctedLines);
+	static void ConstructAdjacency(
+		std::vector<CrossFeature> &in_crossfea, 
+		std::vector< std::vector<int> > &out_adjacency,
+		double Error_Angle,           //  
+		double FeaturesDistance);     // 设置理论目标像素宽度
+	static void RectangleSearch(
+		std::vector< std::vector<int> > &in_adjacency,
+		std::vector< cv::Vec4i > &out_rects);
 private:
     // Step 1: Cross Feature Extraction
     void CrossFeatureExtraction(std::vector<cv::Vec4d> &in_correctedLines, std::vector< cv::Point2d > &LinesGrad, std::vector<CrossFeature> &out_crossfea);

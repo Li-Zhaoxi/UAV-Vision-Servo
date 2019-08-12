@@ -154,3 +154,115 @@ void C1_FTD::drawCrossFeatures(std::vector<CrossFeature> &in_crossfea, cv::Mat &
 		}
 	}
 }
+
+
+
+void C1_FTD::ConstructAdjacency(
+	std::vector<CrossFeature> &in_crossfea,
+	std::vector< std::vector<int> > &out_adjacency,
+	double Error_Angle,
+	double FeaturesDistance)
+{
+	const double T1 = std::cos(Error_Angle), T2 = -T1;
+	const int all_features = (int)in_crossfea.size();
+	int minWidth = std::min(int(FeaturesDistance - FeaturesDistance / 2), 3), maxWidth = (int)(FeaturesDistance + FeaturesDistance);
+
+	std::vector<CrossFeature> ValidFeatures;
+	for (int i = 0; i < all_features; i++)
+	{
+		if (in_crossfea[i].isValid)
+			ValidFeatures.push_back(in_crossfea[i]);
+	}
+	const int valid_num = (int)ValidFeatures.size();
+
+	double judgeValue;
+	CrossFeature *feature_1(NULL), *feature_2(NULL), *valid_features = ValidFeatures.data();
+	cv::Point2d vecOiOj;
+	std::vector<int> linkTemp;
+
+	out_adjacency.clear();
+
+	for (int i = 0; i < valid_num; i++)
+	{
+		feature_1 = valid_features + i;
+		linkTemp.clear();
+		for (int j = 0; j < valid_num; j++)
+		{
+			if (i == j)
+				continue;
+			feature_2 = valid_features + j;
+
+			judgeValue = feature_1->V_r.x*feature_2->V_l.x + feature_1->V_r.y*feature_2->V_l.y;
+			if (judgeValue <= T1)
+				continue;
+
+			judgeValue = feature_1->V_l.x*feature_2->V_r.x + feature_1->V_l.y*feature_2->V_r.y;
+			if (judgeValue >= T2)
+				continue;
+
+			vecOiOj.x = feature_2->O.x - feature_1->O.x, vecOiOj.y = feature_2->O.y - feature_1->O.y;
+			judgeValue = sqrt(vecOiOj.x*vecOiOj.x + vecOiOj.y*vecOiOj.y);
+			if (judgeValue < minWidth || judgeValue > maxWidth)
+				continue;
+
+			judgeValue = (feature_1->V_l.x*vecOiOj.x + feature_1->V_l.y*vecOiOj.y) / judgeValue;
+			if (judgeValue >= T2)
+				continue;
+
+			judgeValue = feature_1->V_r.x*vecOiOj.y - feature_1->V_r.y*vecOiOj.x;
+			if (judgeValue >= 0)
+				continue;
+
+
+			linkTemp.push_back(j);
+		}
+		out_adjacency.push_back(linkTemp);
+	}
+}
+
+
+
+void C1_FTD::RectangleSearch(
+	std::vector< std::vector<int> > &in_adjacency,
+	std::vector< cv::Vec4i > &out_rects)
+{
+	out_rects.clear();
+
+	const int valid_num = (int)in_adjacency.size();
+
+	cv::Vec4i findTemp;
+	int idx_CrossFeature[4][2];
+	int nodesFocus = -1;
+	for (int i = 0; i < valid_num; i++)
+	{
+		findTemp[0] = i;
+		nodesFocus = 0; idx_CrossFeature[0][0] = i; idx_CrossFeature[0][1] = -1;
+		while (nodesFocus != -1)
+		{
+			if (idx_CrossFeature[nodesFocus][1] + 1 == in_adjacency[idx_CrossFeature[nodesFocus][0]].size())//�����ǰfocus
+			{
+				nodesFocus -= 1;
+				continue;
+			}
+			idx_CrossFeature[nodesFocus][1] += 1;
+			int newIdx = in_adjacency[idx_CrossFeature[nodesFocus][0]][idx_CrossFeature[nodesFocus][1]];
+			nodesFocus += 1;
+			if (nodesFocus == 4)
+			{
+				if (in_adjacency[idx_CrossFeature[3][0]][idx_CrossFeature[3][1]] == idx_CrossFeature[0][0])
+				{
+					out_rects.push_back(findTemp);
+					break;
+				}
+				else
+				{
+					nodesFocus -= 1;
+					continue;
+				}
+			}
+			idx_CrossFeature[nodesFocus][0] = newIdx; idx_CrossFeature[nodesFocus][1] = -1;
+			findTemp[nodesFocus] = newIdx;
+
+		}
+	}
+}

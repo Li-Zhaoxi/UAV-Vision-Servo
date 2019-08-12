@@ -19,7 +19,7 @@
 本文件夹提供了论文中提到的SEDLines, YAED, RVIBE, C2_FTD, C1_FTD这5个算法的源代码。下面给出代码的使用方法。
 
 - src
- + SEDLines: 简化的直线段检测算法，调用头文件 *SEDLines/Simplified_EDLines.h* 即可。
+ + SEDLines: 简化的直线段检测算法。
  + YAED: 经典的椭圆检测算法
  + RVIBE
  + C2_FTD
@@ -34,11 +34,28 @@
 	sedlines.getLineGradients(imgSmallOpp, sedlines.LineGradients); // 给出直线段两端的梯度信息 (可选)
 	sedlines.drawLineSegments4i(imgSmall);                          // 绘制检测出的直线段
 
-**5. C1_FTD**: 合作目标的十字部分的检测算法，调用头文件 *C1_FTD/C1_FTD.h* 即可。
+**5. C1\_FTD**: 合作目标的十字部分的检测算法，调用头文件 *C1\_FTD/C1\_FTD.h* 即可。算法需要输入包含梯度的直线段信息，需要结合SEDLines进行使用。在算法中输入的是SEDLines的FittedLineSegments和LineGradients。
+	
+    C1_FTD c1_ftd;
+	c1_ftd.setFixedParams(15, CV_PI / 6);                                   // 设置算法阈值
+	c1_ftd.setAdaptParams(60);                                              // 设置目标十字像素宽度阈值
+	c1_ftd.runC1_FTD(sedlines.FittedLineSegments, sedlines.LineGradients);
+	c1_ftd.drawCrossFeatures(ImgG, true);                                   // 显示检测出的十字角点特征
+	c1_ftd.drawC1_FTD(ImgG, true);                                          // 显示检测出的最终十字目标
 
+*考虑到后续项目要用到特征点检测，特征组合的算法，我们将主要函数封装为静态函数以供直接使用。*
 
+    std::vector<cv::Vec4d> out_correctedLines;             // 被矫正的直线段信息
+	C1_FTD::CorrectLineSegments(sedlines.FittedLineSegments, out_correctedLines);
+	
+	std::vector<CrossFeature> out_crossfea;                // 检测出的角点特征信息
+	C1_FTD::CrossFeatureExtraction(out_correctedLines, sedlines.LineGradients, out_crossfea, CV_PI / 6, 15);
 
-
+    std::vector< std::vector<int> > out_adjacency;         // 构造十字特征的邻接信息
+	C1_FTD::ConstructAdjacency(out_crossfea, out_adjacency, CV_PI / 6, 15);
+	
+    std::vector< cv::Vec4i > out_rects;                    // 检测出的十字目标，存储的是目标十字特征的角标
+	C1_FTD::RectangleSearch(out_adjacency, out_rects);
 
 ## projects: 工程文件
 

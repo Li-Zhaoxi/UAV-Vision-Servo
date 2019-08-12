@@ -69,7 +69,8 @@ int main_4_1()
 
 	Simplified_EDLines sedlines(540, 960);
 	C1_FTD c1_ftd;
-
+	c1_ftd.setFixedParams(15, CV_PI / 6);
+	c1_ftd.setAdaptParams(60);
 	sedlines.runSimplified_EDLines(ImgG);
 	sedlines.getFittedLineSegments(sedlines.FittedLineSegments);
 	sedlines.getLineGradients(ImgG, sedlines.LineGradients);
@@ -79,4 +80,32 @@ int main_4_1()
 	cv::waitKey();
 
 	return 0;
+}
+
+
+
+int main_4_2()
+{
+	string str_path;
+	str_path = ""; //图片路径，注意参数设置
+	Mat ImgG = cv::imread(str_path, 0);
+
+
+	Simplified_EDLines sedlines(540, 960);
+	sedlines.runSimplified_EDLines(ImgG);
+	sedlines.getFittedLineSegments(sedlines.FittedLineSegments);
+	sedlines.getLineGradients(ImgG, sedlines.LineGradients);
+
+
+	std::vector<cv::Vec4d> out_correctedLines;
+	C1_FTD::CorrectLineSegments(sedlines.FittedLineSegments, out_correctedLines);
+	
+	std::vector<CrossFeature> out_crossfea;
+	C1_FTD::CrossFeatureExtraction(out_correctedLines, sedlines.LineGradients, out_crossfea, CV_PI / 6, 15);
+	
+	std::vector< std::vector<int> > out_adjacency;
+	C1_FTD::ConstructAdjacency(out_crossfea, out_adjacency, CV_PI / 6, 15);
+
+	std::vector< cv::Vec4i > out_rects;
+	C1_FTD::RectangleSearch(out_adjacency, out_rects);
 }
