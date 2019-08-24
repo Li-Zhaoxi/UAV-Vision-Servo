@@ -131,7 +131,7 @@ public:
 	//Constructor and Destructor
 	CEllipseDetectorYaed(void);
 	~CEllipseDetectorYaed(void);
-
+	void setDefaultParms(int img_rows, int img_cols);
 	void DetectAfterPreProcessing(std::vector<struct Ellipse>& ellipses, cv::Mat1b& E, cv::Mat1f& PHI);
 
 	//Detect the ellipses in the gray image

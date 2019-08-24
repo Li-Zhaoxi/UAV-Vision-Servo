@@ -19,11 +19,11 @@
 本文件夹提供了论文中提到的SEDLines, YAED, RVIBE, C2_FTD, C1_FTD这5个算法的源代码。下面给出代码的使用方法。
 
 - src
- + SEDLines: 简化的直线段检测算法。
- + YAED: 经典的椭圆检测算法
- + RVIBE
- + C2_FTD
- + C1_FTD
+ + SEDLines: 直线段检测算法。
+ + YAED: 椭圆检测算法
+ + RVIBE: 运动目标检测算法
+ + C2_FTD： 圆+十字组合检测算法
+ + C1_FTD： 十字检测算法
 
 **1. SEDLines**: 简化的直线段检测算法，调用头文件 *SEDLines/Simplified_EDLines.h* 即可。
 
@@ -33,6 +33,33 @@
 	sedlines.getFittedLineSegments(sedlines.FittedLineSegments);    // 给出亚像素直线段的信息   (可选)
 	sedlines.getLineGradients(imgSmallOpp, sedlines.LineGradients); // 给出直线段两端的梯度信息 (可选)
 	sedlines.drawLineSegments4i(imgSmall);                          // 绘制检测出的直线段
+
+**2. YAED**: 椭圆检测算法，使用默认参数，调用头文件 *YAED/EllipseDetectorYaed.h* 即可。
+
+    CEllipseDetectorYaed yaed; // 定义变量
+
+	vector<struct Ellipse> ellsYaed;
+	Mat1b tmpImgg = cv::Mat1b(Img_G);
+	yaed.Detect(tmpImgg, ellsYaed); // 进行椭圆检测
+
+    // 绘制检测结果
+	cvtColor(Img_G, Img_C, COLOR_GRAY2BGR);
+	Mat3b tmpImgc = cv::Mat3b(Img_C);
+	yaed.DrawDetectedEllipses(tmpImgc, ellsYaed, 0, 3);
+	imshow("YAED", tmpImgc);
+
+**3. RVIBE**: 运动目标检测算法，必须输入视频序列，单张图片无法出结果，同时需要配置文件，相关配置文件在工程中已给出，调用头文件 *RVIBE/CFG_RVIBE.h*，*RVIBE/RVIBE.h* 即可。
+
+    CFG_RVIBE cfg("RVIBE");      // 调用配置文件
+	RVIBE rvibe(270, 480, cfg);  // 构造函数
+    rvibe.run_RVIBE_tbb(Img_G);  // 输入灰度图，第一次输入无结果，第二次输入会显示运动目标
+    // 检测结果存储在 rvibe.findRects
+
+**4. C2\_FTD**：圆+十字组合检测算法，调用头文件 *C2_FTD/C2_FTD.h* 即可
+
+    C2_FTD c2_ftd(540, 960); // 构造函数
+    c2_ftd.runC2_FTD(elps, sedlines.LineSegments, Img_G.rows, Img_G.cols); // 检测目标，输入椭圆，直线段，图像尺寸
+    c2_ftd.drawC2_FTD(Img_G); // 显示检测结果
 
 **5. C1\_FTD**: 合作目标的十字部分的检测算法，调用头文件 *C1\_FTD/C1\_FTD.h* 即可。算法需要输入包含梯度的直线段信息，需要结合SEDLines进行使用。在算法中输入的是SEDLines的FittedLineSegments和LineGradients。
 	

@@ -42,6 +42,36 @@ CEllipseDetectorYaed::CEllipseDetectorYaed(void) : _times(6, 0.0), _timesHelper(
 	srand(unsigned(time(NULL)));
 }
 
+void CEllipseDetectorYaed::setDefaultParms(int img_rows, int img_cols)
+{
+	int		iThLength = 16;
+	float	fThObb = 3.0f;
+	float	fThPos = 1.0f;
+	float	fTaoCenters = 0.05f;
+	int 	iNs = 16;
+	float	fThScoreScore = 0.8f;
+	cv::Size	szPreProcessingGaussKernelSize = cv::Size(5, 5);
+	double	dPreProcessingGaussSigma = 1.0;
+	float	fDistanceToEllipseContour = 0.1f;
+	float	fMinReliability = 0.4f;	// Const parameters to discard bad ellipses
+
+	int orows, ocols;
+	orows = img_rows, ocols = img_cols;
+	cv::Size sz(img_cols, img_rows);
+
+	float	fMaxCenterDistance = sqrt(float(sz.width*sz.width + sz.height*sz.height)) * fTaoCenters;
+	SetParameters(szPreProcessingGaussKernelSize,
+		dPreProcessingGaussSigma,
+		fThPos,
+		fMaxCenterDistance,
+		iThLength,
+		fThObb,
+		fDistanceToEllipseContour,
+		fThScoreScore,
+		fMinReliability,
+		iNs
+	);
+}
 
 CEllipseDetectorYaed::~CEllipseDetectorYaed(void)
 {
@@ -1717,7 +1747,7 @@ void CEllipseDetectorYaed::DetectAfterPreProcessing(vector<Ellipse>& ellipses, M
 void CEllipseDetectorYaed::Detect(Mat1b& I, vector<Ellipse>& ellipses)
 {
 	Tic(1); //prepare data structure
-
+	setDefaultParms(I.rows, I.cols);
 	// Set the image size
 	_szImg = I.size();
 

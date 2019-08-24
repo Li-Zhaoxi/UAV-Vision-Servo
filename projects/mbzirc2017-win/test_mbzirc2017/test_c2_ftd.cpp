@@ -97,3 +97,42 @@ int main_5_0()
 	system("pause");
 	return 0;
 }
+
+
+int main_5_1()
+{
+	string img_path = "..\\..\\..\\results\\ori.jpg";
+	double t1, t2;
+	Mat Img_C, Img_G;
+	Img_C = imread(img_path);
+	resize(Img_C, Img_C, cv::Size(960, 540));
+	cvtColor(Img_C, Img_G, CV_RGB2GRAY);
+
+
+	C2_FTD c2_ftd(540, 960);
+	CEllipseDetectorYaed yaed;
+	Simplified_EDLines sedlines(540, 960);
+
+
+	// ºÏ≤‚Õ÷‘≤
+	t1 = (double)cv::getTickCount();
+	vector<struct Ellipse> ellsYaed;
+	vector<cv::RotatedRect> elps;
+	Mat1b tmpImgg = cv::Mat1b(Img_G);
+	yaed.Detect(tmpImgg, ellsYaed);
+	CEllipseDetectorYaed::YAED_Ellipse_2_CV(ellsYaed, elps);
+
+	sedlines.runSimplified_EDLines(Img_G);
+
+	c2_ftd.runC2_FTD(elps, sedlines.LineSegments, Img_G.rows, Img_G.cols);
+
+	t2 = (double)cv::getTickCount();
+	cout << "C2-FTD:" << (t2 - t1) * 1000 / cv::getTickFrequency() << endl;
+
+	c2_ftd.drawC2_FTD(Img_G);
+
+	waitKey();
+
+	system("pause");
+	return 0;
+}

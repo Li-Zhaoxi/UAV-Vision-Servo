@@ -2,6 +2,6 @@
 
 int main()
 {
-	return main_3_0();
+	return main_5_1();
 	return 0;
 }

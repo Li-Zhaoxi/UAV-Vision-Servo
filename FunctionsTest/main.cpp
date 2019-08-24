@@ -12,14 +12,14 @@
 #include <fstream>
 
 
-int main_1(); // 使用一个视频测试SEDLines
-int main_2(); // 使用一个视频测试RVIBE
-int main_3(); // 使用一个视频测试YAED
+int main_1(); // 使用一个视频测试SEDLines √
+int main_2(); // 使用一个视频测试RVIBE √
+int main_3(); // 使用一个视频测试YAED √
 
-int main_4(); // 使用一个视频：直线段检测 -> C1-FTD
-int main_5(); // 使用一个图片：直线段检测 -> C1-FTD
+int main_4(); // 使用一个视频：直线段检测 -> C1-FTD √
+int main_5(); // 使用一个图片：直线段检测 -> C1-FTD √
 
-int main_6(); // 使用一个视频：椭圆检测 -> C2-FTD
+int main_6(); // 使用一个视频：椭圆检测 -> C2-FTD √
 
 
 int main_7(); // 使用一个视频：(并行)直线段检测 -> C1-FTD

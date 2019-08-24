@@ -68,6 +68,7 @@ public: // 用于非实例化调用的函数
 	static void RectangleSearch(
 		std::vector< std::vector<int> > &in_adjacency,
 		std::vector< cv::Vec4i > &out_rects);
+	//static void drawRects(std::vector< cv::Vec4i > &in_rects);
 private:
     // Step 1: Cross Feature Extraction
     void CrossFeatureExtraction(std::vector<cv::Vec4d> &in_correctedLines, std::vector< cv::Point2d > &LinesGrad, std::vector<CrossFeature> &out_crossfea);
